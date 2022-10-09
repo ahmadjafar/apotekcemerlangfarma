@@ -13,8 +13,7 @@ class Drug extends Model
     use HasFactory, SoftDeletes;
 
     protected $fillable = [
-        'name', 'description', 'ingredients', 'dose', 'how_to_use', 'price', 'rate'
-        ,'types','picturePath', 'manufacture'
+        'name', 'description', 'ingredients', 'dose', 'how_to_use', 'price','types','picturePath', 'manufacture'
     ];
 
     public function getCreatedAtAttribute($value)
