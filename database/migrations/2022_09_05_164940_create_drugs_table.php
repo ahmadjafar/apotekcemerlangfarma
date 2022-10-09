@@ -21,7 +21,7 @@ class CreateDrugsTable extends Migration
             $table->string('dose')->nullable();
             $table->string('how_to_use')->nullable();
             $table->integer('price')->nullable();
-            $table->double('rate')->nullable();
+            // $table->double('rate')->nullable();
             $table->string('types')->nullable();
             $table->string('manufacture')->nullable();
             $table->text('picturePath')->nullable();

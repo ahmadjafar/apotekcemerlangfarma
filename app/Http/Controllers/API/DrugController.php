@@ -21,8 +21,8 @@ class DrugController extends Controller
         $price_from = $request->input('price_from');
         $price_to = $request->input('price_to');
 
-        $rate_from = $request->input('rate_from');
-        $rate_to = $request->input('rate_to');
+        // $rate_from = $request->input('rate_from');
+        // $rate_to = $request->input('rate_to');
 
         if($id)
         {
@@ -71,18 +71,18 @@ class DrugController extends Controller
 
         }
 
-        if($rate_from)
-        {
-            $drug->where('rate', '>=', $rate_from);
+        // if($rate_from)
+        // {
+        //     $drug->where('rate', '>=', $rate_from);
 
-        }
+        // }
 
         
-        if($rate_to)
-        {
-            $drug->where('rate', '<=', $rate_to);
+        // if($rate_to)
+        // {
+        //     $drug->where('rate', '<=', $rate_to);
 
-        }
+        // }
 
         return ResponseFormatter::success
         (

@@ -21,7 +21,6 @@
                             <th class="border px-6 py-4">ID</th>
                             <th class="border px-6 py-4">NAME</th>
                             <th class="border px-6 py-4">PRICE</th>
-                            <th class="border px-6 py-4">RATE</th>
                             <th class="border px-6 py-4">TYPE</th>
                             <th class="border px-6 py-4">MANUFACTURE</th>
                             <th class="border px-6 py-4">ACTION</th>
@@ -35,7 +34,6 @@
                         <td class="border px-6 py-4">{{ $item->id }}</td>
                         <td class="border px-6 py-4">{{ $item->name }}</td>
                         <td class="border px-6 py-4">{{ number_format ( $item->price) }}</td>
-                        <td class="border px-6 py-4">{{ $item->rate }}</td>
                         <td class="border px-6 py-4">{{ $item->types }}</td>
                         <td class="border px-6 py-4">{{ $item->manufacture }}</td>
                         <td class="border px-6 py-4 text-center">
@@ -54,7 +52,7 @@
                         
                     @empty
                         <tr>
-                            <td colspan="6" class="border text-center p-5">
+                            <td colspan="5" class="border text-center p-5">
                                 Data Tidak Ditemukan
                             </td>
                         </tr>

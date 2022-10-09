@@ -29,7 +29,7 @@ class DrugRequest extends FormRequest
             'description' => 'required',
             'ingredients' => 'required',
             'price' => 'required|integer',
-            'rate' => 'required|numeric',
+            // 'rate' => 'required|numeric',
             'dose' => 'required|max:255',
             'how_to_use' => 'required|max:255',
             'manufacture' => 'required|max:255',
