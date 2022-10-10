@@ -18,7 +18,7 @@ use App\Http\Controllers\API\TransactionController;
 |
 */
 
-Route::middleware('auth:sanctum')->group(function(){
+Route::middleware('auth:sanctum')->group(function () {
 
     // Harus Login terlebih dahulu
 
@@ -32,9 +32,9 @@ Route::middleware('auth:sanctum')->group(function(){
     Route::post('transaction/{id}', [TransactionController::class, 'update']);
 }); 
 
-Route::post('login',[UserController::class,'login']);
-Route::post('Register',[UserController::class,'register']);
+Route::post('login', [UserController::class,'login']);
+Route::post('register', [UserController::class,'register']);
 
-Route::get('drug', [DrugController::class], 'all');
+Route::get('drug', [DrugController::class, 'all']);
 
 Route::post('midtrans/callback', [MidtransController::class,'callback']);
