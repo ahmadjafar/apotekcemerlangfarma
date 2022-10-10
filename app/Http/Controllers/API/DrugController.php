@@ -42,30 +42,28 @@ class DrugController extends Controller
 
         $drug = Drug::query();
 
-        if($name)
-        {  // 'like' mencari yang mirip
-            $drug->where('name', 'like' , '%' , $name, '%');
+        if ($name)  {  // 'like' mencari yang mirip
+            $drug->where('name', 'like', '%', $name, '%');
         }
 
-        if($types)
-        {
-            $drug->where('types','like','%', $types, '%');
+        if ($types) {
+            $drug->where('types', 'like', '%', $types, '%');
     
-        }
+         }
 
-        if($ingredients)
+        if ($ingredients)
         {
             $drug->where('types','like','%', $ingredients, '%');
     
         }
 
-        if($price_from)
+        if ($price_from)
         {
             $drug->where('price', '>=', $price_from);
 
         }
 
-        if($price_to)
+        if ($price_to)
         {
             $id->where('price', '<=', $price_from);
 
@@ -84,7 +82,7 @@ class DrugController extends Controller
 
         // }
 
-        return ResponseFormatter::success
+        return ResponseFormatter :: success
         (
             $drug->paginate($limit),
             'Data list produk berhasil diambil'
