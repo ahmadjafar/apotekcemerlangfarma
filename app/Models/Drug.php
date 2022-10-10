@@ -16,11 +16,12 @@ class Drug extends Model
         'name', 'description', 'ingredients', 'dose', 'how_to_use', 'price','types','picturePath', 'manufacture'
     ];
 
-    public function getCreatedAtAttribute($value)
-
-    {
-        return Carbon::parse($value)->timestamp;
-    }
+    // public function getCreatedAtAttribute($value)
+    // {
+    //     return Carbon::parse($value)->timestamp;
+    // }
+    
+    public $timestamps = true;
 
     public function getUpdatedAtAttribute($value)
     {
