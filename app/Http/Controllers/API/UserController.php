@@ -154,7 +154,7 @@ class UserController extends Controller
     public function updatePhoto(Request $request)
     {
         $validator = Validator::make($request->all(), [
-            'file' => 'required|image|max:2048'
+            'file' => 'required|image|max:5000'
 
         ]);
 
