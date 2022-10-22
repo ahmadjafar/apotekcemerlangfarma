@@ -30,7 +30,7 @@ class Transaction extends Model
 
     {
         return Carbon::parse($created_at)
-        ->getPreciseTimestamp(3);  // untuk format jam
+        ->getPreciseTimestamp(3);  
     }
 
     public function getUpdatedAtAttribute($updated_at)

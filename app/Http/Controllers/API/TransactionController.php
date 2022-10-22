@@ -43,7 +43,7 @@ class TransactionController extends Controller
 
         return ResponseFormatter::success(
             $transaction->paginate($limit),
-            'Data list transaction berhasil diamnil'
+            'Data list transaction berhasil diambil'
 
         );
     }
@@ -86,11 +86,11 @@ class TransactionController extends Controller
         Config::$is3ds = config('services.midtrans.is3ds');
 
         $transaction = Transaction::with(['drug', 'user'])->find($transaction->id);
-
+        // dd($transaction);
 
         // membuat Transaksi Midtrans
         $midtrans = [
-            'transactions_detail' => [
+            'transaction_details' => [
                 'order_id' => $transaction->id,
                 'gross_amount' => (int) $transaction->total,
             ],
