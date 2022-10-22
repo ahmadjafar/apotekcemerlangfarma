@@ -26,14 +26,16 @@ class Transaction extends Model
         return $this->hasOne(User::class, 'id', 'user_id');
     }
         
-    public function getCreatedAtAttribute($value)
+    public function getCreatedAtAttribute($created_at)
 
     {
-        return Carbon::parse($value)->timestamp;  // untuk format jam
+        return Carbon::parse($created_at)
+        ->getPreciseTimestamp(3);  // untuk format jam
     }
 
-    public function getUpdatedAtAttribute($value)
+    public function getUpdatedAtAttribute($updated_at)
     {
-        return $this->getCreatedAtAttribute;  // sama saja seperti code getCreatedAtAttribute
+        return Carbon::parse($updated_at)
+        ->getPreciseTimestamp(3);  // sama saja seperti code getCreatedAtAttribute
     }
 }
