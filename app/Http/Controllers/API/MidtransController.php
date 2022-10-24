@@ -74,6 +74,47 @@ class MidtransController extends Controller
         // simpan transaksi
         $transaction->save(); 
 
+        if ($transaction)
+        {
+            if($status == 'capture' && $fraud == 'accept' )
+            {
+                //
+            }
+            else if ($status == 'settlement')
+            {
+                //
+            }
+            else if ($status == 'success')
+            {
+                //
+            }
+            else if($status == 'capture' && $fraud == 'challenge' )
+            {
+                return response()->json([
+                    'meta' => [
+                        'code' => 200,
+                        'message' => 'Midtrans Payment Challenge'
+                    ]
+                ]);
+            }
+            else
+            {
+                return response()->json([
+                    'meta' => [
+                        'code' => 200,
+                        'message' => 'Midtrans Payment not Settlement'
+                    ]
+                ]);
+            }
+
+            return response()->json([
+                'meta' => [
+                    'code' => 200,
+                    'message' => 'Midtrans Notification Success'
+                ]
+            ]);
+        }
+
     }
 
     public function success()

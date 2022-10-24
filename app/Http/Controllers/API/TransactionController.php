@@ -50,7 +50,7 @@ class TransactionController extends Controller
 
     public function update(Request $request, $id)
     {
-        $transaction = Transaction::findprfail($id);
+        $transaction = Transaction::findOrFail($id);
 
         $transaction->update($request->all());
 
@@ -75,7 +75,7 @@ class TransactionController extends Controller
             'quantity' => $request->quantity,
             'total' => $request->total,
             'status' => $request->status,
-            'payment_url' => '',
+            'payment_url' => ''
 
         ]);
 
@@ -95,12 +95,12 @@ class TransactionController extends Controller
                 'gross_amount' => (int) $transaction->total,
             ],
 
-            'customer_detail' => [
+            'customer_details' => [
                 'first_name' => $transaction->user->name,
                 'email' => $transaction->user->email,
             ],
 
-            'enable_payment' => ['gopay', 'bank_transfer'],
+            'enable_payments' => ['gopay', 'bank_transfer'],
             'vtweb' => []
         ];
 
