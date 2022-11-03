@@ -44,11 +44,10 @@ class MidtransController extends Controller
                     $transaction->status = 'PENDING';
                 }
                 else {
-                    $transaction->status = 'SUCCESS';
+                    $transaction->status = 'ON_DELIVERY';
                 }
             }
-        }
-        
+        }      
         else if ($status == 'settlement') 
         {
             $transaction->status = 'SUCCESS';
@@ -59,22 +58,22 @@ class MidtransController extends Controller
         }
         else if ($status == 'deny') 
         {
-            $transaction->status = 'CANCALED';
+            $transaction->status = 'CANCALLED';
         }
         else if ($status == 'expire') 
         {
-            $transaction->status = 'CANCALED';
+            $transaction->status = 'CANCALLED';
         }
         else if ($status == 'cancel') 
         {
-            $transaction->status = 'CANCALED';
+            $transaction->status = 'CANCALLED';
         }
        
 
         // simpan transaksi
         $transaction->save(); 
 
-        if ($transaction)
+         if ($transaction)
         {
             if($status == 'capture' && $fraud == 'accept' )
             {

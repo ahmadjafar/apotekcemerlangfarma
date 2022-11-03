@@ -13,7 +13,7 @@
             </a>
            </div>
            <div class="bg-white">
-            <table class="table-auto w-full">
+            <table class="table-auto w-full text-center">
 
                 <thead>
                     <tr>

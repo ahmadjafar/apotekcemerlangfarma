@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {!!__('Drug &raquo; Create') !!}
+           Medicine &raquo; {{ $item->name }} &raquo; Edit 
         </h2>
     </x-slot>
 
@@ -97,7 +97,7 @@
                             Types
                         </label>
                         <input  value="{{ old('types') ?? ($item->types) }}" name="types" class="apperance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 laoding-tight focus:ouline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Types">
-                        <p class="text-gray-600 text-xs italic">Dipisahkan dengan koma, Cotoh :Vitamin, Covid-19</p>
+                        <p class="text-gray-600 text-xs italic">Dipisahkan dengan koma, Cotoh :Anak, Dewasa, Lansia</p>
                     </div>
                 </div>
                 <div class="flex flex-wrap -mx-3 mb-6">

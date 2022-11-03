@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {!!__('Drug &raquo; Create') !!}
+            {!!__('Medicine &raquo; Create') !!}
         </h2>
     </x-slot>
 
@@ -97,7 +97,7 @@
                             Types
                         </label>
                         <input  value="{{ old('types') }}" name="types" class="apperance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 laoding-tight focus:ouline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Types">
-                        <p class="text-gray-600 text-xs italic">Dipisahkan dengan koma, Cotoh :All, Vitamin, Covid-19</p>
+                        <p class="text-gray-600 text-xs italic">Dipisahkan dengan koma,  Cotoh :Anak, Dewasa, Lansia</p>
                     </div>
                 </div>
                 <div class="flex flex-wrap -mx-3 mb-6">
@@ -111,7 +111,7 @@
                 <div class="flex flex-warp -mx-3 mb-6">
                     <div class="w-full px-3 text-right">
                         <button type="submit" class="bg-green-500 hover:bg-green-700 font-bold text-white py-2 px-4 rounded ">
-                             Save Drug
+                             Save Medicine
                             </button>
                     </div>
                 </div>  

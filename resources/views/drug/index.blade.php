@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Drug') }}
+            {{ __('Medicine') }}
         </h2>
     </x-slot>
 
@@ -9,21 +9,21 @@
         <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
            <div class="mb-10">
             <a href="{{route('drug.create') }}" class="bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded"  >
-            + Create Drug
+            + Create Medicine
             </a>
            </div>
            <div class="bg-white">
-            <table class="table-auto w-full">
+            <table class="table-auto w-full text-center">
 
                 <thead>
                     <tr>
                        
-                            <th class="border px-6 py-4">ID</th>
-                            <th class="border px-6 py-4">NAME</th>
-                            <th class="border px-6 py-4">PRICE</th>
-                            <th class="border px-6 py-4">TYPE</th>
-                            <th class="border px-6 py-4">MANUFACTURE</th>
-                            <th class="border px-6 py-4">ACTION</th>
+                            <th class="border px-6 py-4">ID Medicine</th>
+                            <th class="border px-6 py-4">Name</th>
+                            <th class="border px-6 py-4">Price</th>
+                            <th class="border px-6 py-4">Type</th>
+                            <th class="border px-6 py-4">Manufacture</th>
+                            <th class="border px-6 py-4">Action</th>
 
                     </tr>
                 </thead>

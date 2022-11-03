@@ -13,12 +13,13 @@
                 <thead>
                     <tr>
                        
-                            <th class="border px-6 py-4">ID</th>
+                            <th class="border px-6 py-4">ID Order</th>
                             <th class="border px-6 py-4">Drug</th>
-                            <th class="border px-6 py-4">User</th>
+                            <th class="border px-6 py-4">Patient</th>
                             <th class="border px-6 py-4">Quantity</th>
                             <th class="border px-6 py-4">Total</th>
                             <th class="border px-6 py-4">Status</th>
+                            <th class="border px-6 py-4">Time</th>
                             <th class="border px-6 py-4">Action</th>
 
                     </tr>
@@ -33,6 +34,7 @@
                         <td class="border px-6 py-4">{{ $item->quantity }}</td>
                         <td class="border px-6 py-4"> <p>Rp.</p> {{ number_format (  $item->total) }}</td>
                         <td class="border px-6 py-4">{{ $item->status }}</td>
+                        <td class="border px-6 py-4">{{  $item->created_at}}</td>
                         <td class="border px-6 py-4 text-center">
                             <a href="{{route('transactions.show', $item->id) }}" class="inline-block bg-blue-500 hover:bg-blue-700 text-white font-bold py-1 px-4 mx-2 rounded">
                                 View
@@ -49,7 +51,7 @@
                         
                     @empty
                         <tr>
-                            <td colspan="7" class="border text-center p-5">
+                            <td colspan="8" class="border text-center p-5">
                                 Data Tidak Ditemukan
                             </td>
                         </tr>
