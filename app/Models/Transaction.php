@@ -12,7 +12,7 @@ class Transaction extends Model
 {
     use HasFactory, SoftDeletes;
 
-    protected $fillable= [
+    protected $fillable = [
         'drug_id', 'user_id', 'quantity', 'total', 'status', 'payment_url'
     ];
 
@@ -25,17 +25,17 @@ class Transaction extends Model
     {
         return $this->hasOne(User::class, 'id', 'user_id');
     }
-        
+
     public function getCreatedAtAttribute($created_at)
 
     {
         return Carbon::parse($created_at)
-        ->getPreciseTimestamp(3);  
+            ->format('d-m-y');
     }
 
     public function getUpdatedAtAttribute($updated_at)
     {
         return Carbon::parse($updated_at)
-        ->getPreciseTimestamp(3);  // sama saja seperti code getCreatedAtAttribute
+            ->getPreciseTimestamp(3);  // sama saja seperti code getCreatedAtAttribute
     }
 }
