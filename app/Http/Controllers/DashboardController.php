@@ -36,6 +36,7 @@ class DashboardController extends Controller
             $date[] = $dateNow;
             $day[] = Transaction::whereDate('created_at', $dateNow)->where('status', 'SUCCESS')->sum('total');
         }
+        $totalDay = array_sum($day);
 
         // Laporan Bulanan
         // monthly
@@ -49,15 +50,19 @@ class DashboardController extends Controller
             $monthIn[] = Transaction::whereMonth('created_at', $monthNow)->whereYear('created_at', date('Y'))->where('status', 'SUCCESS')->sum('total');
         }
 
+        // total monthly
+        $totalMonth = array_sum($monthIn);
+
+
         $dayTransaction  = (new LarapexChart)->areaChart()
             ->setTitle('Laporan Transaction SUCCESS (' . $dayRequest . ' Hari Terakhir)')
-            ->setSubtitle($dayRequest . '  Hari Terakhir')
+            ->setSubtitle($dayRequest . '  Hari Terakhir Rp' . number_format($totalDay, 0, ',', '.'))
             ->addData('Transaction SUCCESS ', $day)
             ->setXAxis($date);
 
         $monthTransaction = (new LarapexChart)->barChart()
             ->setTitle('Laporan Transaction SUCCESS.')
-            ->setSubtitle($countMonth . ' Bulan Terakhir')
+            ->setSubtitle($countMonth . ' Bulan Terakhir Rp' . number_format($totalMonth, 0, ',', '.'))
             ->addData('Transaction SUCCESS ', $monthIn)
             ->setXAxis($month);
 
