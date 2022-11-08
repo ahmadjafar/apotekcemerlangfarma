@@ -15,12 +15,20 @@ class TransactionController extends Controller
      */
     public function index()
     {
-        $transaction = Transaction::with(['drug', 'user'])->paginate(10);
+
+
+        // if (request()->status) {
+        //     $transactions = Transaction::with(['user', 'drug'])->where('status', request()->status)->orderBy('created_at', 'DESC')->paginate(10);
+        // } else {
+        //     $transactions = Transaction::with(['user', 'drug'])->orderBy('created_at', 'DESC')->paginate(10);
+        // }
+        $transaction = Transaction::when(request()->status, function ($q) {
+            $q->where('status', request()->status);
+        })->with(['drug', 'user'])->paginate(10);
 
         return view('transactions.index', [
             'transactions' => $transaction
         ]);
-        
     }
 
     /**
