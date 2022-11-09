@@ -108,6 +108,14 @@
                         <input value="{{ old('manufacture') }}" name="manufacture" class="apperance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 laoding-tight focus:ouline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="manufacture">
                     </div>
                 </div>
+                <div class="flex flex-wrap -mx-3 mb-6">
+                    <div class="w-full px-3">
+                        <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-4" for="grid-last-name">
+                            Effect
+                        </label>
+                        <input value="{{ old('effect') }}" name="effect" class="apperance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 laoding-tight focus:ouline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="effect ">
+                    </div>
+                </div>
                 <div class="flex flex-warp -mx-3 mb-6">
                     <div class="w-full px-3 text-right">
                         <button type="submit" class="bg-green-500 hover:bg-green-700 font-bold text-white py-2 px-4 rounded ">

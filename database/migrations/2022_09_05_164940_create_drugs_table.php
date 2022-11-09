@@ -26,6 +26,7 @@ class CreateDrugsTable extends Migration
             $table->string('manufacture')->nullable();
             $table->text('picturePath')->nullable();
 
+
             $table->softDeletes();
             $table->timestamps();
         });

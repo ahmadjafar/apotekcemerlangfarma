@@ -33,6 +33,7 @@ class DrugRequest extends FormRequest
             'dose' => 'required|max:255',
             'how_to_use' => 'required|max:255',
             'manufacture' => 'required|max:255',
+            'effect' => 'required',
             'types' => ''
         ];
     }

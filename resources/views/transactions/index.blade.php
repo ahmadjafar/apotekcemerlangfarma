@@ -14,7 +14,7 @@
                     <tr>
                        
                             <th class="border px-6 py-4">ID Order</th>
-                            <th class="border px-6 py-4">Drug</th>
+                            <th class="border px-6 py-4">Medicine</th>
                             <th class="border px-6 py-4">Patient</th>
                             <th class="border px-6 py-4">Quantity</th>
                             <th class="border px-6 py-4">Total</th>

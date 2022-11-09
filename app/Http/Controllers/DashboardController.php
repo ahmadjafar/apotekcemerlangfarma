@@ -35,7 +35,7 @@ class DashboardController extends Controller
             $dateNow = Carbon::now()->subDays($i)->format('Y-m-d');
             $date[] = $dateNow;
             $day[] = Transaction::whereDate('created_at', $dateNow)->where('status', 'SUCCESS')->sum('total');
-        }
+        }  
         $totalDay = array_sum($day);
 
         // Laporan Bulanan
