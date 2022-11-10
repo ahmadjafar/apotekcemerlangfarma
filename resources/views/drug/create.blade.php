@@ -80,7 +80,7 @@
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-4" for="grid-last-name">
                             Price
                         </label>
-                        <input value="{{ old('price') }}" name="price" class="apperance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 laoding-tight focus:ouline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="number" placeholder="Food F" >
+                        <input value="{{ old('price') }}" name="price" class="apperance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 laoding-tight focus:ouline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="number" placeholder="Price" >
                     </div>
                 </div>
                 {{-- <div class="flex flex-wrap -mx-3 mb-6">
@@ -113,7 +113,7 @@
                         <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-4" for="grid-last-name">
                             Effect
                         </label>
-                        <input value="{{ old('effect') }}" name="effect" class="apperance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 laoding-tight focus:ouline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="effect ">
+                        <input value="{{ old('effect') }}" name="effect" class="apperance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 laoding-tight focus:ouline-none focus:bg-white focus:border-gray-500" id="grid-last-name" type="text" placeholder="Effect ">
                     </div>
                 </div>
                 <div class="flex flex-warp -mx-3 mb-6">
