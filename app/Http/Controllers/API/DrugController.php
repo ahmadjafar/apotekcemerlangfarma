@@ -13,7 +13,7 @@ class DrugController extends Controller
     public function all(Request $request)
     {
         $id = $request->input('id');
-        $limit = $request->input('limit', 6);
+        $limit = $request->input('limit', 100);
         $name = $request->input('name');
         $types = $request->input('types');
         $ingredients = $request->input('ingredients');
