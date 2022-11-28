@@ -17,7 +17,7 @@ class DrugController extends Controller
     public function index()
     {
         
-        $drug = Drug::paginate(10);
+        $drug = Drug::paginate(20);
 
 
         return view('drug.index', [

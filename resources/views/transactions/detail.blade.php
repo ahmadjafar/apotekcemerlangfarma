@@ -34,7 +34,7 @@
                         <div class="flex flex-wrap mb-3">
                             <div class="w-2/6">
                                 <div class="text-sm">User Name</div>
-                                <div class="text-xl font-bold">{{ $item->user->name }}</div>
+                                <div class="text-xl font-bold">{{ $item->user->name  ?? "Data Tidak Ditemukan"  }}</div>
                             </div>
                             <div class="w-3/6">
                                 <div class="text-sm">Email</div>

@@ -23,7 +23,9 @@ class CreateTransactionsTable extends Migration
             $table->text('payment_url');
 
             $table->softDeletes();
-            $table->timestamps();
+            $table->timestamps()
+            ;
+            
         });
     }
 

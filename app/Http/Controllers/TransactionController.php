@@ -18,7 +18,20 @@ class TransactionController extends Controller
 
         $transaction = Transaction::when(request()->status, function($q) {
             $q->where('status', request()->status);
-        })->with(['drug', 'user'])->paginate(10);
+        })->with(['drug', 'user'])->paginate(10)
+        // ->editColumn('create_at', function($row){
+        //     return date("d-m-Y", ($row->create_at /1000));
+        // })
+        
+        ;
+
+        // $transaction = Transaction::when(request()->status, function($q) {
+        //     $q->where('status', request()->status);
+        // })->editColumn('create_at', function($row){
+        //     return date("d-m-Y", ($row->create_at /1000));
+        // })
+        // ;
+        
 
 
         // $transaction = Transaction::with(['drug', 'user'])->paginate(10);
@@ -30,12 +43,14 @@ class TransactionController extends Controller
         // }
         $transaction = Transaction::when(request()->status, function ($q) {
             $q->where('status', request()->status);
-        })->with(['drug', 'user'])->paginate(10);
+        })->with(['drug', 'user'])->paginate(20);
 
 
         return view('transactions.index', [
             'transactions' => $transaction
         ]);
+
+
     }
 
     /**
