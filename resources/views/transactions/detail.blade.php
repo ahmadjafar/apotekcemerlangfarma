@@ -38,32 +38,32 @@
                             </div>
                             <div class="w-3/6">
                                 <div class="text-sm">Email</div>
-                                <div class="text-xl font-bold">{{ $item->user->email }}</div>
+                                <div class="text-xl font-bold">{{ $item->user->email ?? "Data Tidak Ditemukan" }}</div>
                             </div>
                             <div class="w-1/6">
                                 <div class="text-sm">City</div>
-                                <div class="text-xl font-bold">{{ $item->user->city }}</div>
+                                <div class="text-xl font-bold">{{ $item->user->city ?? "Data Tidak Ditemukan" }}</div>
                             </div>
                         </div>
                         <div class="flex flex-wrap mb-3">
                             <div class="w-4/6">
                                 <div class="text-sm">Address</div>
-                                <div class="text-xl font-bold">{{ $item->user->address }}</div>
+                                <div class="text-xl font-bold">{{ $item->user->address ?? "Data Tidak Ditemukan" }}</div>
                             </div>
                             <div class="w-1/6">
                                 <div class="text-sm">Number</div>
-                                <div class="text-xl font-bold">{{ $item->user->houseNumber }}</div>
+                                <div class="text-xl font-bold">{{ $item->user->houseNumber ?? "Data Tidak Ditemukan" }}</div>
                             </div>
                             <div class="w-1/6">
                                 <div class="text-sm">Phone</div>
-                                <div class="text-xl font-bold">{{ $item->user->phoneNumber }}</div>
+                                <div class="text-xl font-bold">{{ $item->user->phoneNumber ?? "Data Tidak Ditemukan" }}</div>
                             </div>
                         </div>
                         <div class="flex flex-wrap mb-3">
                             <div class="w-5/6">
                                 <div class="text-sm">Payment URL</div>
                                 <div class="text-lg">
-                                    <a href="{{ $item->payment_url }}">{{ $item->payment_url }}</a>
+                                    <a href="{{ $item->payment_url }}">{{ $item->payment_url  }}</a>
                                 </div>
                             </div>
                             <div class="w-1/6">
