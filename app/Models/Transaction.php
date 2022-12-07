@@ -30,15 +30,15 @@ class Transaction extends Model
 
     {
         return Carbon::parse($created_at)
-            // ->format('d-m-y')
-            ->getPreciseTimestamp(3);
+            ->format('d-m-y');
+            // ->getPreciseTimestamp(3);
 
     
     }
     
-    protected $casts = [
-        'create_at' =>'datetime:Y-m-d',
-    ];
+    // protected $casts = [
+    //     'create_at' =>'datetime:Y-m-d',
+    // ];
          
 
     public function getUpdatedAtAttribute($updated_at)
